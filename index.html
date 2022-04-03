@@ -1,0 +1,54 @@
+<html>
+  <head>
+    
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    
+    <title>Fetch API with Free Dictionary</title>
+    script src="https://supereggbert.github.io/aframe-htmlembedcomponent/dist/build.js"></script>
+<style>
+.result{
+font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<a-scene>
+
+<a-entity position="0 1.6 -1" htmlembed>
+<div id="dictionary">
+<div class="result">Word: </div>
+
+<div id="word"></div>
+<div class="result">Synonym:</div>
+<div id="synonym"></div>
+<div class="result">Antonym:</div>
+<div id="antonym"></div>
+</dic>
+</a-entity>
+<a-sky color='#ECECEC'></a-sky>
+</a-scene>
+</body>
+
+<script>
+// Declare variables
+var word = document.getElementById("word");
+// Example word for searching
+var enteredWord = "telephone"
+var synonym = document.getElementById("synonym");
+var antonym = document.getElementById("antonym");
+
+fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + enteredWord)
+.then(response => response.json())
+.then(function (data) {
+// See what is received as a result in a console.log
+console.log(data)
+// Insert what data[0].word in JSON object shows into element with id 
+"word"
+word.innerHTML = data[0].word; 
+// Do the same thing with synonyms and antonyms 
+synonym.innerHTML = data[0].meanings[0].synonyms[0];
+antonym.innerHTML = data[0].meanings[0].antonyms[0];
+})
+</script>
+</html>         
