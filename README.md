@@ -11,7 +11,7 @@ This project was created as a part of the course "Introduction to AR/VR Applicat
 
 ### **Project Screenshots**
 Screenshot of the project.
-!
+![image](https://user-images.githubusercontent.com/56091213/161434657-7507741c-e0b4-44c3-8f30-c826824e4451.png)
 
 
 ### **Link to HTML webpage**
