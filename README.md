@@ -15,7 +15,7 @@ Screenshot of the project.
 
 
 ### **Link to HTML webpage**
-https://austinalford.github.io/Homework-6/
+https://austinalford.github.io/Homework6/
 
 ### **Author**
 The author of the project: Austin Alford
